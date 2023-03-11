@@ -1,12 +1,13 @@
 const Employee = require("../lib/Employee");
 
+
 describe("Employee", () => {
-    it("should  create a new employee", () => {
+    test("should create a new employee", () => {
+        const employee = new Employee("Miguel", 93, "miguel@email.com");
        
-        const employee = new Employee("Miguel",93,"miguel@email.com");
-
-        expect();
-
-        
+        expect(employee.name).toBe("Miguel")
+        expect(employee.id).toBe(93)
+        expect(employee.email).toBe("miguel@email.com")
+        expect(employee.getRole()).toBe("Employee")
     });
 })
